@@ -2,18 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import PlantBabies from './components/PlantBabies';
-import Plant from './components/Plant';
-import CareGuide from './components/CareGuide';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
-    <Route path='/' component={App}/>
-    <Route exact path='/plant_babies' component={PlantBabies}/>
-    <Route exact path='/plant' component={Plant}/>
-    <Route exact path='/care_guide' component={CareGuide}/>
+    <App/>
   </Router>,
 
   document.getElementById('root')
