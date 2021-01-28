@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import Navbar from './NavBar';
 import { loginSuccess } from '../actions/auth'
 
 class Login extends React.Component {
@@ -44,8 +43,8 @@ class Login extends React.Component {
   render(){
   return (
     <div className="Login">
+
     <div class="ui middle aligned center aligned grid">
-        
   <div class="column">
   { this.state.error ? <h4 style={{color: 'red'}}>{this.state.error}</h4> : null}
 
@@ -71,6 +70,8 @@ class Login extends React.Component {
     </form>
 
   </div>
+
+
 </div>
 
 </div>

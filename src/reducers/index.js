@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import plantsReducer from './plantsReducer'
+// import plantReducer from './plantReducer'
 
 
 
 export default combineReducers({
-    plants: plantsReducer
-
+    plants: plantsReducer,
+    // plant: plantReducer
 })

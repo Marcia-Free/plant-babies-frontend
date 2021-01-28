@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-// import {BrowserRouter as Router} from 'react-router-dom';
-import './index.css';
-import 'semantic-ui-css/semantic.min.css'
 
-import rootReducer from './reducers/index'
-import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers/index'
+
+import App from './components/App';
+import 'semantic-ui-css/semantic.min.css'
+import './index.css';
+
 
 const store = createStore(rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -17,7 +19,9 @@ const store = createStore(rootReducer,
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );
