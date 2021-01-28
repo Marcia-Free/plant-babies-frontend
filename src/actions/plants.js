@@ -11,12 +11,12 @@ export const fetchPlantsSuccess = (plants) => {
   }
   
 
-//   export const upVote = (id) => {
-//     return {
-//       type: 'UPVOTE',
-//       id: id
-//     }
-//   }
+  export const createPlantSuccess = (newPlant) => {
+    return {
+      type: 'CREATE_PLANT_SUCCESS',
+      plant: newPlant
+    }
+  }
   
   export const deletePlant = (id) => {
     return {

@@ -4,6 +4,7 @@ import logo from './logo.png';
 import NavBar from './NavBar';
 import Login from './Login';
 import PlantList from './PlantList';
+import Form from './Form';
 
 import {Route, Switch} from 'react-router-dom';
 
@@ -15,9 +16,10 @@ function App() {
     <Fragment>
     <header >
       <NavBar/>
-            <Switch>
-              <Route exact path={'/login'} component={Login}/>
-              <Route exact path={'/plants'} component={PlantList}/>
+          <Switch>
+            <Route exact path={'/login'} component={Login}/>
+            <Route exact path={'/plants'} component={PlantList}/>
+            <Route exact path={'/plants/new'} component={Form}/>
         </Switch>
     </header>
     <body className="App-body">

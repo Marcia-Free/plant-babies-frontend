@@ -13,6 +13,8 @@ function NavBar() {
     
     <a class="active item"><Link to='/'>Welcome Back User</Link></a>
     <a class="item"><Link to='/plants'>Plants</Link></a>
+    <a class="item"><Link to='/plants/new'><i className = 'plus icon'></i></Link></a>
+    
     <div class="right item">
       <a class="ui button"><Link to='/login'>Log in</Link></a>
       <a class="ui button">Sign Out</a>

@@ -5,6 +5,9 @@ export default function plants(state = [], action) {
   switch(action.type) {
     case "FETCH_PLANTS_SUCCESS":
       return action.plants
+    case 'CREATE_PLANT_SUCCESS':
+      return [...state, action.plant]
+
 
     case "DELETE_PLANT":
       updatedPlants = state.filter(plantObj => plantObj.id !== action.id)
@@ -12,5 +15,6 @@ export default function plants(state = [], action) {
 
     default:
       return state
+    }
+
   }
-}

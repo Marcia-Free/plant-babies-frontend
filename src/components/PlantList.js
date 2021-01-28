@@ -21,8 +21,9 @@ class PlantList extends React.Component {
 
   renderPlants = () => {
     return this.props.plants.map(p => (
-      <Plant plant={p} />
-
+      <Plant plant={p} 
+             key={p.id}
+      />
     ));
   }
 
