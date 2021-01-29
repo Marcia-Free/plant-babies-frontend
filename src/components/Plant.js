@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import {Route, Switch} from 'react-router-dom';
-import { upVote, deletePlant } from '../actions/plants'
-
-import PlantShow from './PlantShow';
+import {deletePlant } from '../actions/plants'
+import { Link } from 'react-router-dom';
 
 const URL = 'http://localhost:3000/plants'
 const URLback = 'http://localhost:3001/plants'
@@ -20,31 +19,31 @@ class Plant extends React.Component {
     })
   }
 
+
   render() {
-    <Switch>
-    <Route exact path={`/plants/${this.props.plant.id}`} component={PlantShow}/>
-    </Switch>
     
   return (
     
     <div className="olive ui centered card">
       
-      <a className="image" href= {`${URL}/${this.props.plant.id}`}>
-        <img src={this.props.plant.img} />
-      </a>
       <div className="content">
-        <p className="header">{this.props.plant.name}</p>
+        <p className="header"><Link to= {`/plants/${this.props.plant.id}`}>{this.props.plant.name}</Link></p>
       </div>
+
+      <a >
+        <img className="ui fluid image" src={this.props.plant.img}/>
+      </a>
+
       <div class="center aligned description">
         <p>{this.props.plant.description}</p>
       </div>
 
       <div className="extra content">
-          <div><i className="left floated circle icon">Water Frequency: {this.props.plant.water_level}/5</i></div>
-          <div><i className="right floated circle outline icon">Light Frequency: {this.props.plant.light_level}/5</i></div>
+          <div><i className="left floated circle icon">Watering: {this.props.plant.water_level}/5</i></div>
+          <div><i className="right floated circle outline icon">Sun: {this.props.plant.light_level}/5</i></div>
       </div>
-      <div class="ui two buttons">
-        <div class="ui basic olive button">Edit</div>
+      <div>
+        <Link to= {`/plants/edit/${this.props.plant.id}`}><button class="ui basic olive button">Edit</button></Link>
         <div class="ui basic green button" onClick={this.handleRemove}>Delete</div>
       </div>
 
@@ -55,8 +54,8 @@ class Plant extends React.Component {
 
 
 
+
 const mapDispatchToProps = {
-  // upVote: upVote,
   deletePlant: deletePlant
 }
 

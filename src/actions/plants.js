@@ -24,3 +24,20 @@ export const fetchPlantsSuccess = (plants) => {
       id: id
     }
   }
+
+  export const editPlant = (id) => {
+    return {
+      type: 'EDIT_PLANT',
+      id: id
+    }
+  }
+
+  export const updatePlant = (updatedPlant) => {
+    return {
+      type: 'UPDATE_PLANT',
+      plant: updatedPlant
+    }
+  }
+
+
+

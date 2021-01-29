@@ -11,7 +11,7 @@ function NavBar() {
   <div class="ui menu">
 
     
-    <a class="active item"><Link to='/'>Welcome Back User</Link></a>
+    <a class="active item"><Link to='/'>Welcome Back Marcia!</Link></a>
     <a class="item"><Link to='/plants'>Plants</Link></a>
     <a class="item"><Link to='/plants/new'><i className = 'plus icon'></i></Link></a>
     
